@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 import com.google.inject.Inject;
 
-import azevedorafaela.cucumbermaven.support.World;
+import azevedorafaela.cucumbermaven.support.Context;
 
 public class LoginPage extends BasePage {
 
@@ -14,8 +14,8 @@ public class LoginPage extends BasePage {
 
 	// Extend the BasePage, inject and pass the world to the constructor
 	@Inject
-	public LoginPage(World world) {
-		super(world);
+	public LoginPage(Context context) {
+		super(context);
 	}
 
 	@FindBy(id = "usernameOrEmail")

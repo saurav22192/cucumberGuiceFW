@@ -2,14 +2,14 @@ package azevedorafaela.cucumbermaven.pages;
 
 import org.openqa.selenium.support.PageFactory;
 
-import azevedorafaela.cucumbermaven.support.World;
+import azevedorafaela.cucumbermaven.support.Context;
 
 public abstract class BasePage {
-	protected World world;
+	protected Context world;
 
 	// Initiate the Page Factory and create as abstract class, so
 	// you can use for all the other Page Objects
-	public BasePage(World world) {
+	public BasePage(Context world) {
 		this.world = world;
 		PageFactory.initElements(world.driver, this);
 	}

@@ -3,7 +3,7 @@ package azevedorafaela.cucumbermaven.steps;
 import com.google.inject.Inject;
 
 import azevedorafaela.cucumbermaven.pages.LoginPage;
-import azevedorafaela.cucumbermaven.support.World;
+import azevedorafaela.cucumbermaven.support.Context;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -13,7 +13,7 @@ public class LoginStep {
 	// Here you need to inject the pages that you need to use
 	// Then you don't need to create new instance 
 	@Inject
-	private World world;
+	private Context world;
 
 	@Inject
 	private LoginPage loginPage;
