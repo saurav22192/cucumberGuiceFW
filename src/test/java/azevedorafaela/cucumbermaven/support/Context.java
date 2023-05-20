@@ -11,4 +11,5 @@ public class Context {
 	public WebDriver driver = new DriverFactory().getManager();
 	public Support support = new Support();
 	public Wait wait = new Wait(driver);
+//	public POMManager pm = new POMManager();
 }

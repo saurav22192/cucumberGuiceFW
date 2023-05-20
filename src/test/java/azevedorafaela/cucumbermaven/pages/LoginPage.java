@@ -13,7 +13,7 @@ public class LoginPage extends BasePage {
 	public String URL = "log-in?redirect_to=https%3A%2F%2Fwordpress.com%2F";
 
 	// Extend the BasePage, inject and pass the world to the constructor
-	@Inject
+//	@Inject
 	public LoginPage(Context context) {
 		super(context);
 	}

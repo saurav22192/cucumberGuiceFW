@@ -1,5 +1,6 @@
 package azevedorafaela.cucumbermaven.steps;
 
+import azevedorafaela.cucumbermaven.support.POMManager;
 import com.google.inject.Inject;
 
 import azevedorafaela.cucumbermaven.pages.LoginPage;
@@ -14,22 +15,29 @@ public class LoginStep {
 	// Then you don't need to create new instance 
 	@Inject
 	private Context world;
-
 	@Inject
-	private LoginPage loginPage;
+	private POMManager pm;
+//	@Inject
+//   POMManager p1m = null;
 
+//	private LoginPage loginPage = null;
+
+//			= new POMManager(world);
+
+//	private LoginPage loginPage;
+//pm.getLoginPage();
 	@Given("^I have opened the browser$")
 	public void i_have_opened_the_browser() throws Throwable {
-		loginPage.navigate();
+		pm.getLoginPage().navigate();
 	}
 
 	@When("^I send my credentials$")
 	public void i_send_my_credentials() throws Throwable {
-		loginPage.login(world.support.user, world.support.pass);
+		pm.getLoginPage().login(world.support.user, world.support.pass);
 	}
 
 	@Then("^I should see the \"([^\"]*)\" title of the page$")
 	public void i_should_see_the_title_of_the_page(String title) throws Throwable {
-		loginPage.assertTitle(title);
+		pm.getLoginPage().assertTitle(title);
 	}
 }
